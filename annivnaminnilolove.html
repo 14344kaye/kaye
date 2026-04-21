@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 1st Anniversary 💖</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Georgia, serif;
+    background:linear-gradient(135deg,#ffe6eb,#fff);
+    text-align:center;
+    color:#b44b72;
+    overflow-x:hidden;
+}
+
+.bg{
+    position:fixed;
+    inset:0;
+    background:radial-gradient(circle, rgba(255,182,193,0.25), transparent 70%);
+    animation:glow 8s infinite alternate;
+    z-index:-1;
+}
+@keyframes glow{
+    from{transform:scale(1);}
+    to{transform:scale(1.1);}
+}
+
+h1{
+    text-shadow:0 0 15px pink;
+    margin-top:20px;
+}
+
+/* LOCK SCREEN */
+#lock{
+    position:fixed;
+    inset:0;
+    background:rgba(255,240,245,0.95);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:100;
+}
+#wax{
+    font-size:80px;
+    cursor:pointer;
+    animation:pulse 2s infinite;
+}
+@keyframes pulse{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.1);}
+}
+
+button{
+    padding:10px 16px;
+    margin:8px;
+    border:none;
+    border-radius:20px;
+    background:#e6a4b4;
+    color:white;
+    cursor:pointer;
+    box-shadow:0 0 10px pink;
+}
+button:hover{
+    transform:scale(1.05);
+    background:#d46a8c;
+}
+
+/* ENVELOPE */
+.env{
+    width:300px;
+    min-height:180px;
+    margin:20px auto;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 0 20px rgba(255,182,193,0.6);
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+}
+.flap{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:#f8c8dc;
+    transform-origin:top;
+    transition:1s;
+    z-index:2;
+}
+.open .flap{
+    transform:rotateX(180deg);
+}
+.letter{
+    display:none;
+    padding:20px;
+    text-align:left;
+    line-height:1.6;
+    font-size:15px;
+    max-height:420px;
+    overflow-y:auto;
+}
+.open .letter{
+    display:block;
+}
+
+/* GALLERY */
+.gallery{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+.gallery img{
+    width:150px;
+    margin:10px;
+    border-radius:12px;
+    box-shadow:0 0 15px rgba(255,182,193,0.7);
+}
+
+/* MEMORY MAP */
+.map{
+    width:90%;
+    height:380px;
+    margin:auto;
+    background:#fff0f5;
+    border:2px dashed pink;
+    position:relative;
+}
+.pin{
+    position:absolute;
+    font-size:24px;
+}
+.pol{
+    position:absolute;
+    width:130px;
+    background:white;
+    padding:6px;
+    box-shadow:0 0 15px rgba(255,182,193,0.6);
+}
+.pol img{
+    width:100%;
+}
+.cap{
+    font-size:12px;
+    margin-top:5px;
+}
+
+/* FLOATING NOTES */
+.note{
+    position:absolute;
+    background:white;
+    padding:10px;
+    border-radius:12px;
+    box-shadow:0 0 10px pink;
+    animation:float 6s infinite ease-in-out;
+}
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+}
+</style>
+</head>
+<body>
+
+<div id="lock">
+    <h2>🔒 Enter Password</h2>
+    <input type="password" id="pass">
+    <button onclick="unlock()">Unlock 💌</button>
+    <div id="wax">🔴</div>
+</div>
+
+<div class="bg"></div>
+
+<h1>💖 Happy 1st Anniversary 💖</h1>
+
+<div class="env" id="env" onclick="toggleEnv()">
+    <div class="flap"></div>
+    <div class="letter">
+        <p><strong>To my dearest love, Julius,</strong></p>
+
+        <p>
+        Thank you for always taking time to update me and talk to me kahit na busy ka at marami kang ginagawa.
+        Sana mas dalasan mo pa pag update hehehe.
+        Sorry sa pangungulit at pagtatampo minsan kasi miss na miss lang kasi kita🥹.
+        </p>
+
+        <p>
+        Salamat sa lahat ng pag-unawa, sa lahat ng effort na makakapagpasaya sa akin.
+        I see you and your efforts to make me happy, my love.
+        Marami akong ipinagpapasalamat sa Diyos dahil binigay ka niya sa akin.
+        Binigyan niya ako ng bagong inspirasyon upang magpatuloy at wag sumuko sa buhay.
+        I had a little tiny prayer on the back of my mind before,
+        “Lord, I’m ready” and then you came,
+        not in an unexpected way but you came in my life with ease,
+        not forced, and not dramatic, but you came in just right. ♥️
+        </p>
+
+        <p>
+        There are days that I am in my low moments, sometimes overthinking and overwhelmed,
+        but I am grateful and truly thankful that God made you a patient man,
+        so patient that you do not fail to appease me, soothe me, and make me feel good,
+        that I can’t help but crawl back into your arms every single time.
+        I know that I may be too much sometimes but always remember that
+        no matter how grumpy or jealous I get,
+        I will always always always love you. 💘
+        </p>
+
+        <p>
+        My love for you is deeper than any negative emotions I have.
+        I’m sorry for making things quite hard for you but know that I will always be by your side,
+        supporting you, cheering for you, praying for you,
+        and loving you with all my heart.💘
+        </p>
+
+        <p>
+        May we create more happy memories together and more moments to treasure forever.
+        Happy 1st Anniversary, my lolove, my pogi, my baby, my lovie hubby, my love! 💗
+        </p>
+
+        <p>
+        <strong>Your lolove,<br>Niña Kaye</strong>
+        </p>
+
+        <p><em>
+        Sorry love, I tried to share my thoughts and make this letter in tagalog or hiligaynon
+        but it’s easier for me to pour all my thoughts in English😅.
+        </em></p>
+    </div>
+</div>
+
+<button onclick="musicToggle()">🎵 Music</button>
+<button onclick="share()">🔗 Share</button>
+
+<audio id="music" loop autoplay>
+    <source src="Libu-Libong Buwan (Uuwian) - Kyle Raphael (Official Music Video).mp3" type="audio/mpeg">
+</audio>
+
+<h2>Gallery 🖼️</h2>
+<div class="gallery">
+    <img src="photo1.jpg">
+    <img src="photo2.jpg">
+</div>
+
+<h2>Memory Map 📍</h2>
+<div class="map">
+    <div class="pin" style="left:15%;top:20%;">📍</div>
+    <div class="pol" style="left:20%;top:25%;">
+        <img src="photo1.jpg">
+        <div class="cap">Our beautiful moment 💕</div>
+    </div>
+
+    <div class="pin" style="left:60%;top:40%;">📍</div>
+    <div class="pol" style="left:65%;top:45%;">
+        <img src="photo2.jpg">
+        <div class="cap">Another unforgettable memory ✨</div>
+    </div>
+</div>
+
+<script>
+const PASS = "love123";
+
+function unlock(){
+    if(document.getElementById("pass").value === PASS){
+        document.getElementById("lock").style.display = "none";
+    } else {
+        alert("Wrong password 💔");
+    }
+}
+
+function toggleEnv(){
+    document.getElementById("env").classList.toggle("open");
+}
+
+function musicToggle(){
+    let music = document.getElementById("music");
+    if(music.paused){
+        music.play();
+    } else {
+        music.pause();
+    }
+}
+
+function share(){
+    navigator.clipboard.writeText(window.location.href);
+    alert("Link copied 💌");
+}
+
+const messages = [
+    "I love you always 💖",
+    "Forever with you ✨",
+    "You are my answered prayer 💕"
+];
+
+setInterval(()=>{
+    let note = document.createElement("div");
+    note.className = "note";
+    note.innerText = messages[Math.floor(Math.random()*messages.length)];
+    note.style.left = Math.random()*80 + "vw";
+    note.style.top = Math.random()*70 + "vh";
+    document.body.appendChild(note);
+    setTimeout(()=>note.remove(),6000);
+},3000);
+</script>
+
+</body>
+</html>
